@@ -1,13 +1,20 @@
-import ResponsiveAppBar from "./components/ResponsiveAppBar"
-import ControlledCarousel from "./components/ControlledCarousel"
+import Navbar from "./components/Navbar"
+import Home from "./components/Home"
+
+
 
 function App() {
-  return (
-    <div className="App">
-     <ResponsiveAppBar/>
-     <ControlledCarousel/>
+    return (
+    <div>
+      <Navbar/>
+      <Home/>
+       
+      
     </div>
-  );
+  )
 }
+
+  ;
+
 
 export default App;
