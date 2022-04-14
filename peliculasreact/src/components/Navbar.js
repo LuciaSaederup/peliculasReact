@@ -11,23 +11,20 @@ import UltimosLanzamientos from './UltimosLanzamientos';
 import Home from './Home';
 import Populares from "./Populares"
 import Buscar from "./Buscar"
+ import {useState} from "react"
+
+
 
 
 const Navbar=()=>{
 return (
-   <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+
+   <Box sx={{ flexGrow: 1,
+    position:"static" }}>
+      <AppBar>
         <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }}
-          >
-            🎬
-          </IconButton>
-          <BrowserRouter>
+         🎬
+        
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
               <Link to="/">Home</Link>
             </Typography>  
@@ -40,13 +37,6 @@ return (
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
               <Link to="/buscar">Buscar</Link>
             </Typography>  
-            <Routes>
-              <Route path="/" element={<Home />}/>
-              <Route path="/ultimos-lanzamientos" element={<UltimosLanzamientos />} />
-              <Route path="/populares" element={<Populares />}/>
-              <Route path="/buscar" element={<Buscar />}/>
-            </Routes>
-          </BrowserRouter>
         </Toolbar>
       </AppBar>
     </Box>

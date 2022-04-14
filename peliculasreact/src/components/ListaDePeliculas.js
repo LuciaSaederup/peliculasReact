@@ -4,11 +4,9 @@ import { useState, useEffect } from "react"
 import PeliculaItem from "./PeliculaItem"
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import { styled, useTheme } from '@mui/material/styles';
 
 
 
-const drawerWidth = 240;
 
 const ListaDePeliculas = ({ titulo, url }) => {
 
@@ -20,21 +18,28 @@ const ListaDePeliculas = ({ titulo, url }) => {
   }, [])
   
   return (
-    <Box sx={{ flexGrow: 1, maxWidth: 752 }}>
-    
-      <Typography sx={{ mt: 4, mb: 2 }} variant="h6" component="div">
+   <Box
+        sx={{
+          display:'flex',
+          flexWrap:'wrap',
+          bgcolor: 'pink',
+          border: 1,
+          height: 300,
+          width:500
+        }}>
+      <h3>
       {titulo}      
-      </Typography>
+      </h3>
       {peliculas.map(pelicula => (
         
         <PeliculaItem 
         titulo={pelicula.title}
         imagen={`https://image.tmdb.org/t/p/w300/${pelicula.poster_path}`}
-        link={`/${pelicula.id}`}/>
-      
+        link={`/${pelicula.id}`}
+        id={pelicula.id}/>      
 
         ))}
-  </Box>
+    </Box>
   )}
 
 export default ListaDePeliculas
