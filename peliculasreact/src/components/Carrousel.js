@@ -1,46 +1,68 @@
-// import React from 'react';
-// import { useState, useEffect } from "react"
-// import ApiKey from "/Variables"
-// import LinkApi from "/Variables"
-// import Carousel from "react"
-// import Item from "react"
-// import Paper from "react"
-// import Button from "react"
+import React from 'react';
+ import { useState, useEffect } from "react"
+ import Carousel from 'react-bootstrap/Carousel'
+ import Slider from "react-slick";
+ import {Link} from 'react-router-dom';
+ import ItemCarousel from "./ItemCarousel";
+ import Container from '@mui/material/Container';
+ import Box from '@mui/material/Box';
+ import Card from '@mui/material/Card';
+ import notFound from "../img/notFound.png"
+ import "slick-carousel/slick/slick.css";
+ import "slick-carousel/slick/slick-theme.css";
 
-// const Carrousel=()=>{
-//     const [peliculasTrending, setPeliculasTrending] = useState([])
-//   useEffect(() => {
-//     fetch(`${LinkApi}/trending/movie/week?${ApiKey}language=es-AR&page=1`)
-//     .then(res => res.json())
-//     .then(data => setPeliculasTrending(data.results))
-//   }, [])
-//     console.log(peliculasTrending)
-    
-//     return (
-//         <Carousel>
-//             {
-//                 peliculasTrending.map( (pelicula) => <Item key={pelicula.id} item={pelicula.titulo} /> )
-//             }
-//          </Carousel>
-//   )
-  
-//  }
-  
-  
-// //  const Item=()=>
-// //  {
-// //      return (         
-// //        <Paper>
-// //            <h2>{pelicula.titulo}</h2>
-// //            <p>{props.item.description}</p>
-// //            <Button className="CheckButton">
-// //            Check it out!
-// //            </Button>
-// //        </Paper>
-// //     )
-// // }
+ import { positions } from '@mui/system';
 
 
-  
+const Carrousel=()=>{
 
-//  export default Carrousel;
+const [peliculas, setPeliculas] = useState([])
+
+  useEffect(() => {
+    fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=14dee5a9be1ea64bcdee2b6e99a5c61c&language=es-AR&page=1`)
+    .then(res => res.json())
+    .then(data => setPeliculas(data.results))
+  }, [])
+  console.log(peliculas)
+    return (
+       
+            <Box sx={{
+            display:"flex",
+                bgcolor:'black',
+            flexDirection:"column", mt:7,
+        //    height:450,
+           position:'relative',
+           border:1, 
+            
+        }}>
+                <Slider 
+                    infinite= {true}
+                    slidesToShow= {3}
+                    slidesToScroll= {1}
+                    autoplay= {true}
+                    speed= {800}
+                    autoplaySpeed= {800}
+                    cssEase= "linear"
+                >
+                {peliculas.map(pelicula=> (
+                    
+                            <ItemCarousel
+                                imagen={pelicula.backdrop_path ? 
+                                    `https://image.tmdb.org/t/p/w400/${pelicula.backdrop_path}`
+                                    : notFound
+                                }
+                                titulo={pelicula.title? pelicula.title: pelicula.name}
+                                id={pelicula.id}
+                                descripcion={pelicula.overview}
+                            />
+                        
+                    ))}
+                </Slider>
+            </Box>
+     
+        
+    )
+}
+
+
+export default Carrousel;
