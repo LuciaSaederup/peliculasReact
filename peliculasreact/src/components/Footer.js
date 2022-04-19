@@ -9,7 +9,8 @@ import LocalMoviesOutlinedIcon from '@mui/icons-material/LocalMoviesOutlined';
 
 const Footer = () => {
     return (
-        <Box sx={{bgcolor:"black", position:'absolut', zIndex:4}}>
+        <Box sx={{background:'#ffbf00',
+            position:'absolut', zIndex:4}}>
             <CardContent sx={{display:"flex", justifyContent:"space-around", alignItems:"center"}}>
                 <Box sx={{textAlign:"center"}}>
                     <Typography variant="subtitle1" color="white" fontWeight="bold"> 

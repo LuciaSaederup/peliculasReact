@@ -22,7 +22,12 @@ const PeliculaItem = ({titulo, imagen, link, id}) => {
   
   
   return(
-    <Box id={id}>
+    <Box id={id} sx={{backgroundColor: '#ffff',
+    color: '#000',
+    '&:hover': {
+      backgroundColor: '#ffbf00',
+      
+    }}}>
             <List>
                 <ListItem
                   secondaryAction={
@@ -30,9 +35,7 @@ const PeliculaItem = ({titulo, imagen, link, id}) => {
                         ➕
                     </IconButton>}>
                   <ListItemAvatar>
-                    <Avatar>
-                    {imagen}
-                    </Avatar>
+                  <Avatar src={imagen} alt={titulo} />
                   </ListItemAvatar>
                   <ListItemText primary={titulo} />
 

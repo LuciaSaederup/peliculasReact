@@ -11,7 +11,7 @@ const ItemCarousel = ({titulo, imagen, id, descripcion}) => {
     
     return (
         <Link to={`/detalle/${id}`} style={{textDecoration:"none"}}>
-        <ImageList sx={{ width: 600, height: 500, ml:'20px' }}>
+        <ImageList sx={{ width: 600, height: 400, ml:'20px', mr:'20px' }}>
           
         <ImageListItem key={id} sx={{ width: 300, height: 300 }} >
           <img

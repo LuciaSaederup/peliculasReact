@@ -15,7 +15,7 @@ const UltimosLanzamientos=()=>{
        flexWrap: 'wrap' }}
        >
          <PeliculaTarjeta
-    url="latest"/>
+    url="upcoming"/>
        </Box>
        </div>
               )

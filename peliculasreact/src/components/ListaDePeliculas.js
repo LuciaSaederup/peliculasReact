@@ -35,7 +35,8 @@ const ListaDePeliculas = ({ titulo, url }) => {
 
       {peliculas.map(pelicula => (
         <Link to={`/detalle/${pelicula.id}`} style={{textDecoration:'none',
-        color:'black'}}>
+        color:'black',
+        }}>
         <PeliculaItem 
         titulo={pelicula.title}
         imagen={`https://image.tmdb.org/t/p/w200/${pelicula.poster_path}`}

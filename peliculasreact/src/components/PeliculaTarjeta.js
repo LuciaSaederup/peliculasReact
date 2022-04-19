@@ -18,7 +18,7 @@ const PeliculaTarjeta=({url})=>{
   }, [])
 console.log(peliculas)
 return(
-  <div>
+  <div className='movie-grid'>
     {peliculas.map(pelicula => (
       <Link to={`/detalle/${pelicula.id}`} style={{textDecoration:'none'}}>
         <Card sx={{bgcolor:"transparent", m:1, width:300, }} key={pelicula.id}>

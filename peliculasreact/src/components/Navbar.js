@@ -19,13 +19,14 @@ return (
             flexDirection:"row", 
             justifyContent:"space-between", 
             alignItems:"center", 
-            bgcolor:"#000000",
+            background: '#ffbf00',
             pl:1, pr:3}}
             
         >
             <Box sx={{display:"flex", justifyContent:"flex-start", p:1}}>
                 <Link to="/" style={{textDecoration:"none"}}> 
-                 <LocalMoviesOutlinedIcon sx={{fontSize:35, mr:1}} color="white"/>
+                 <LocalMoviesOutlinedIcon sx={{fontSize:35, mr:1, color:"#ffffff",'&:hover': {
+                                color: '#000'}}}/>
                     
                 </Link>
             </Box>
@@ -34,21 +35,24 @@ return (
                 <Box sx={{ display:"flex", justifyContent:"space-between"}}>
                 <Link to="/populares" style={{textDecoration:"none"}}> 
                         <Box sx={{display:"flex", justifyContent:"center", alignItems:"center", mr:3}}>
-                            <Typography variant="h6" color="white">
+                            <Typography  sx={{color: '#000','&:hover': {
+                                color: '#fff'}}}>
                             Populares
                             </Typography>
                         </Box>
                     </Link>
                     <Link to="/ultimos-lanzamientos" style={{textDecoration:"none"}}> 
                         <Box sx={{display:"flex", justifyContent:"center", alignItems:"center", mr:3}}>
-                            <Typography variant="h6" color="white">
+                            <Typography  sx={{color: '#000','&:hover': {
+                                color: '#fff'}}}>
                             Ultimos Lanzamientos
                             </Typography>
                         </Box>
                     </Link>
                     <Link to="/buscar" style={{textDecoration:"none"}}> 
                         <Box sx={{display:"flex", justifyContent:"center", alignItems:"center", mr:3}}>
-                            <Typography variant="h6" color="white">
+                            <Typography  sx={{color: '#000','&:hover': {
+                                color: '#fff'}}}>
                                 Buscar
                             </Typography>
                         </Box>

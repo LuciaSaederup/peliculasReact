@@ -11,16 +11,20 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
 const App=()=> {
     return (
       <BrowserRouter>
-       <Navbar/>
-        <Routes>
-          <Route path="/" element={<Home/>} />
-          <Route path="/populares" element={<Populares />} />
-          <Route path="/ultimos-lanzamientos" element={<UltimosLanzamientos />} />
-          <Route path="/buscar" element={<Buscar />} />
-          <Route path="/detalle/:idPelicula" element={<Detalle />} /> 
-        </Routes>
-         <Footer/> 
-       </BrowserRouter>
+        <div style={{ display: 'flex', flexDirection: 'column', minHeight: "100vh" }}>
+          <div style={{ flexGrow: 1 }}>
+            <Navbar/>
+            <Routes>
+              <Route path="/" element={<Home/>} />
+              <Route path="/populares" element={<Populares />} />
+              <Route path="/ultimos-lanzamientos" element={<UltimosLanzamientos />} />
+              <Route path="/buscar" element={<Buscar />} />
+              <Route path="/detalle/:idPelicula" element={<Detalle />} /> 
+            </Routes>
+          </div>
+          <Footer/>
+        </div>
+      </BrowserRouter>
   )
 }
 
