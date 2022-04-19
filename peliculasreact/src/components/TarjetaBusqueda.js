@@ -9,7 +9,7 @@ const TarjetaBusqueda = ({imagen, titulo, id, tipo}) => {
     return (
         <Card sx={{bgcolor:"transparent", m:1, width:300}} key={id}>
            
-                <Box className="box-busqueda" sx={{display:"flex"}}>
+                <Box sx={{display:"flex"}}>
                     <CardMedia 
                     sx={{width:300}}
                     component="img"

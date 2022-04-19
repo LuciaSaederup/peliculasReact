@@ -28,29 +28,7 @@ const ItemCarousel = ({titulo, imagen, id, descripcion}) => {
     
     </ImageList>
             
-                {/* <Box sx={{display:"flex",                
-
-             }}> */}
-                    {/* <CardMedia 
-                        sx={{width:350, display:"flex", justifyContent:"center", alignItems:"center", zIndex:2, position:'relative',
-                        
-                    }}
-                        component="img"
-                        image = {imagen}
-                        alt={titulo}
-                    />
-                </Box>
-    
-                <CardContent sx={{display:"flex", 
-                bgcolor:'green',
-                position:"center",
-                zIndex: 2,
-                color:'black',
-                }}>
-                <Typography variant="subtitle1" fontWeight= "bold" color="black">
-                    {titulo}
-                 </Typography>
-                </CardContent> */}
+              
             
         </Link>
 

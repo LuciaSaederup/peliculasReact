@@ -1,23 +1,35 @@
 import Box from '@mui/material/Box';
 import * as React from 'react';
 import PeliculaTarjeta from "./PeliculaTarjeta"
+import Typography from '@mui/material/Typography';
 
 
 
 const Populares=()=>{
  
     return (
-      <div>
-      <h2>Peliculas Populares</h2>
-       <Box sx={{
-       display:'flex',
-       flexDirection: 'row',
-       flexWrap: 'wrap' }}
+<Box sx={{
+       
+        textAlign:"center",
+  mt:6,
+  
+
+       }}
        >
-         <PeliculaTarjeta
-      url="populares"/>
+     <Typography variant="h4" fontWeight="bold"  sx={{p:1, mb:5}}>
+       Peliculas Populares</Typography>
+  <Box sx={{ display: 'flex',
+          flexDirection: 'row',
+          p: 1,
+          m: 1,
+          bgcolor: 'background.paper',
+          borderRadius: 1,
+       }}
+       >   
+  <PeliculaTarjeta
+    url="popular"/>
        </Box>
-       </div>
+  </Box>
             )
     }
     export default Populares;

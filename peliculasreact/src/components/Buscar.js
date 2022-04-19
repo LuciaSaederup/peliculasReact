@@ -62,7 +62,7 @@ const Buscar = () => {
         <Container sx={{display:"flex", flexDirection:"column", alignItems:"center", mt:20}}>
             <Paper
                 component="form"
-                sx={{ p: '2px 4px', display: 'flex', width: 400}}
+                sx={{ p: '2px 4px', display: 'flex', width: 400,}}
                 onClick={handleSubmit}
             >
                 <InputBase
@@ -101,7 +101,7 @@ const Buscar = () => {
                         </Link>
                     ))}
                 </Box>
-                {mostrarError && <ErrorImg/>}
+                {/* {mostrarError && <ErrorImg/>}
                 <Box sx={{m:4, bgcolor:"#1565C0", borderRadius:2}}>
                 
                     <Stack spacing={2}>
@@ -109,7 +109,7 @@ const Buscar = () => {
                         onChange={handleChange} color="primary"
                         />
                     </Stack>
-                </Box>
+                </Box> */}
             </Box>
             
         </Container>
